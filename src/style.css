@@ -1,0 +1,339 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    position: fixed;
+    align-items: center;
+    padding: 0px 20px;
+    justify-content: space-between;
+    height: 80px;
+    border-bottom: 2px solid white;
+    background-color: black;
+}
+
+header h1{
+    margin-left: 30px;
+    color:white;
+    background-color: black;
+}
+
+header h1::before{
+    content: 'BOKU NO NOTES'
+}
+
+header li{
+    display: inline;
+    list-style-type: none;
+    margin: auto 20px;
+}
+
+header li a{
+    text-decoration: none;
+}
+
+header #hamburgerButton{
+    color: white;
+    border: 0px;
+    font-size: 40px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+
+body {
+    background-color: black;
+}
+
+#hamburgerButton, #nav2{
+    display: none;
+}
+
+#nav1 li a{
+    color: white
+}
+
+#nav2{
+    width: 50%;
+    position: fixed;
+    height: 2000px;
+    border-left: 2px solid red;
+    left: 50%;
+    padding-top: 30px;
+    top: 0;
+}
+
+#nav2 ul{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#nav2 li{
+    list-style-type: none;
+    font-size: 25px;
+}
+
+#nav2 li a{
+    text-decoration: none;
+}
+
+#qaz{
+    align-self: flex-end;
+    background-color: red;
+    list-style-type: none;
+    font-weight: bold;
+    width:fit-content;
+    padding: 1px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+#qaz1{
+    min-width: 44px;
+    min-height: 44px;
+    background-color: #ffffff00;
+    border: 0px;
+    font-size: 20px;
+    color:#ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#coreContent{
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+}
+
+#inputContent{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding:  30px;
+    gap: 20px;
+}
+
+#inputContent1, #inputContent2{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    border: 2px solid black;
+    padding: 30px;
+    border-radius: 10px;
+    gap: 15px;
+    background-color: white;
+}
+
+#inputContent1 input, #inputContent2 input{
+    background-color: white;
+    color: black;
+    height: 35px;
+    padding: 0px 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+#inputContent2 form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#inputContent2 textarea{
+    height: 300px;
+    resize: none;
+    padding: 10px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: black;
+}
+
+#inputContent2 button{
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+}
+
+#karakter{
+    display: none;
+}
+
+#judul:focus + #karakter{
+    display: block;
+}
+
+#activeContentTrigger{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding:  30px;
+    gap: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+}
+
+#activeContent{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px;
+}
+
+#activeContent2{
+    display: grid;
+    width: 100%;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#activeContent3 h3{
+    text-align: center;
+}
+
+#archieveContentTrigger{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding:  30px;
+    gap: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+}
+
+#archieveContent{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px;
+}
+
+#archieveContent2{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#archieveContent3 h3{
+    text-align: center;
+}
+
+#itemsContent{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+#itemsContent h3{
+    width: 100%;
+}
+
+#itemsContent1{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#itemsContent1 h5{
+    color: rgb(103, 103, 103);
+}
+
+#itemsContent2{
+    display: flex;
+    gap: 10px;
+}
+
+#itemsContent2 #hapus{
+    width: 100%;
+    border: 2px solid red;
+    padding: 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    background-color: white;
+    font-weight: bold;
+}
+
+#itemsContent2 #arsip{
+    width: 100%;
+    border: 2px solid yellow;
+    padding: 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    background-color: white;
+    font-weight: bold;
+}
+
+#itemsContent2 #aktif{
+    width: 100%;
+    border: 2px solid yellow;
+    padding: 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    background-color: white;
+    font-weight: bold;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    height: 80px;
+    border-top: 2px solid white;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+    #activeContent2{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #archieveContent2{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    header h1::before{
+        content: 'B.N.N.'
+    }
+    
+    #nav1{
+        display: none;
+    }
+
+    #hamburgerButton{
+        display: block;
+    }
+
+    #activeContent2{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #archieveContent2{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #itemsContent2{
+        flex-direction: column;
+    }
+}
